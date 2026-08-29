@@ -1,0 +1,37 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+.venv/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE/editor files
+.vscode/
+.idea/
+
+# Video files
+videos/*.mp4
+videos/*.avi
+videos/*.mov
+*.mp4
+*.avi
+*.mov
+
+# Output videos and generated files
+output/*.mp4
+output/*.avi
+output/*.mov
+
+# Model downloads (keep if you want them tracked later)
+models/*.pt
+*.pt
+
+# Local data
+*.log
