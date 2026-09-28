@@ -1,8 +1,8 @@
-\# Vehicle Detection, Tracking \& Counting
+# Vehicle Detection, Tracking & Counting
 
 
 
-A computer vision system for detecting, tracking, and counting vehicles in traffic videos using \*\*YOLO11\*\*, \*\*OpenCV\*\*, and \*\*ByteTrack\*\*.
+A computer vision system for detecting, tracking, and counting vehicles in traffic videos using **YOLO11**, **OpenCV**, and **ByteTrack**.
 
 
 
@@ -10,13 +10,10 @@ The system processes traffic video frames and identifies four vehicle categories
 
 
 
-\* Car
-
-\* Motorcycle
-
-\* Bus
-
-\* Truck
+**car**
+**Motorcycle**
+**Bus**
+**Truck**
 
 
 
@@ -24,11 +21,11 @@ It provides bounding boxes, confidence scores, persistent tracking IDs, a virtua
 
 
 
-\## Features
+## Features
 
 
 
-\### 1. Vehicle Detection
+### 1. Vehicle Detection
 
 
 
@@ -37,7 +34,6 @@ YOLO11 is used to detect vehicles in each video frame.
 
 
 The system currently detects:
-
 
 
 | Class ID | Vehicle    |
@@ -54,7 +50,7 @@ The system currently detects:
 
 
 
-A confidence threshold of \*\*0.4\*\* is used for vehicle detection.
+A confidence threshold of **0.4** is used for vehicle detection.
 
 
 
@@ -62,19 +58,19 @@ Each detected vehicle is displayed with:
 
 
 
-\* Bounding box
+**Bounding box**
 
-\* Vehicle class
+**Vehicle class**
 
-\* Confidence score
-
-
-
-\### 2. Vehicle Tracking
+**Confidence score**
 
 
 
-The project uses \*\*ByteTrack\*\* through Ultralytics tracking.
+### 2. Vehicle Tracking
+
+
+
+The project uses **ByteTrack** through Ultralytics tracking.
 
 
 
@@ -83,63 +79,46 @@ Each detected vehicle receives a tracking ID that is maintained across consecuti
 
 
 Example:
-
-
-
-```text
-
 Car ID: 12 | 0.91
 
 Bus ID: 7 | 0.87
 
 Truck ID: 15 | 0.94
 
-```
-
-
-
 This allows the system to distinguish individual vehicles while they move through the video.
 
 
 
-\### 3. Vehicle Counting
-
+### 3. Vehicle Counting
 
 
 The counting module uses a horizontal virtual line.
 
-
-
 When a tracked vehicle crosses the counting line, its tracking ID is added to the set of counted vehicles.
 
-
-
 This prevents the same tracked vehicle from being counted repeatedly.
-
-
 
 The system maintains separate counts for:
 
 
 
-\* Cars
+**Cars**
 
-\* Motorcycles
+**Motorcycles**
 
-\* Buses
+**Buses**
 
-\* Trucks
+**Trucks**
 
-\* Total vehicles
+**Total vehicles**
 
 
 
-\### 4. Real-Time Statistics
+### 4. Real-Time Statistics
 
 
 
 The processed video displays:
-
 
 
 ```text
@@ -152,7 +131,7 @@ FPS: 24.5
 
 
 
-\### 5. Output Video
+### 5. Output Video
 
 
 
@@ -172,27 +151,23 @@ The output contains:
 
 
 
-\* Vehicle bounding boxes
+**Vehicle bounding boxes**
 
-\* Vehicle labels
+**Vehicle labels**
 
-\* Tracking IDs
+**Tracking IDs**
 
-\* Confidence scores
+**Confidence scores**
 
-\* Counting line
+**Counting line**
 
-\* Vehicle statistics
+**Vehicle statistics**
 
-\* FPS
-
-
-
-\---
+**FPS**
 
 
 
-\## System Workflow
+## System Workflow
 
 
 
@@ -240,29 +215,29 @@ Processed Output Video
 
 
 
-\## Technologies
+## Technologies
 
 
 
-\* \*\*Python\*\*
+**Python**
 
-\* \*\*YOLO11\*\*
+**YOLO11**
 
-\* \*\*Ultralytics\*\*
+**Ultralytics**
 
-\* \*\*OpenCV\*\*
+**OpenCV**
 
-\* \*\*ByteTrack\*\*
+**ByteTrack**
 
-\* \*\*NumPy\*\*
+**NumPy**
 
-\* \*\*PyTorch\*\*
+**PyTorch**
 
-\* \*\*Torchvision\*\*
+**Torchvision**
 
 
 
-\## Project Structure
+## Project Structure
 
 
 
@@ -316,11 +291,11 @@ Vehicle\_Detection\_Counting/
 
 
 
-\## Installation
+## Installation
 
 
 
-\### 1. Clone the repository
+### 1. Clone the repository
 
 
 
@@ -334,7 +309,7 @@ cd Vehicle\_Detection\_Counting
 
 
 
-\### 2. Create a virtual environment
+### 2. Create a virtual environment
 
 
 
@@ -362,7 +337,7 @@ Activate it:
 
 
 
-\### 3. Install dependencies
+### 3. Install dependencies
 
 
 
@@ -394,7 +369,7 @@ torchvision==0.21.0
 
 
 
-\## GPU Support
+## GPU Support
 
 
 
@@ -444,7 +419,7 @@ for YOLO tracking inference.
 
 
 
-\## Input Video
+## Input Video
 
 
 
@@ -480,11 +455,11 @@ Large video files should normally not be committed to GitHub. Add your own compa
 
 
 
-\## Running the Project
+## Running the Project
 
 
 
-\### Vehicle Detection
+### Vehicle Detection
 
 
 
@@ -504,11 +479,9 @@ This module performs YOLO11 detection and displays:
 
 
 
-\* Vehicle bounding boxes
-
-\* Vehicle class
-
-\* Confidence score
+**Vehicle bounding boxes**
+**Vehicle class**
+**Confidence score**
 
 
 
@@ -528,7 +501,7 @@ to stop the video.
 
 
 
-\### Vehicle Tracking
+### Vehicle Tracking
 
 
 
@@ -568,7 +541,7 @@ Press `Q` to exit.
 
 
 
-\### Vehicle Counting
+### Vehicle Counting
 
 
 
@@ -700,7 +673,7 @@ so the same vehicle is not counted multiple times.
 
 
 
-\## Configuration
+## Configuration
 
 
 
@@ -716,7 +689,7 @@ src/vehicle\_counting.py
 
 
 
-\### Confidence Threshold
+### Confidence Threshold
 
 
 
@@ -728,7 +701,7 @@ CONFIDENCE\_THRESHOLD = 0.4
 
 
 
-\### Counting Line
+### Counting Line
 
 
 
@@ -740,7 +713,7 @@ LINE\_Y = 340
 
 
 
-\### Vehicle Classes
+### Vehicle Classes
 
 
 
@@ -762,7 +735,7 @@ VEHICLE\_CLASSES = {
 
 
 
-\### Tracker
+### Tracker
 
 
 
@@ -774,7 +747,7 @@ tracker="bytetrack.yaml"
 
 
 
-\## Testing
+## Testing
 
 
 
@@ -802,7 +775,7 @@ These scripts can be used to verify video loading, YOLO model loading, frame pro
 
 
 
-\## Output
+## Output
 
 
 
@@ -836,7 +809,7 @@ FPS: 21.7
 
 
 
-\## Limitations
+## Limitations
 
 
 
@@ -844,21 +817,21 @@ The current implementation is designed as a practical vehicle detection, trackin
 
 
 
-\* The counting line has a fixed Y-coordinate.
+**The counting line has a fixed Y-coordinate.**
 
-\* The input video path is configured in the source code.
+**The input video path is configured in the source code.**
 
-\* The counting module currently starts from a fixed timestamp.
+**The counting module currently starts from a fixed timestamp.**
 
-\* Counting accuracy depends on detection and tracking quality.
+**Counting accuracy depends on detection and tracking quality.**
 
-\* Heavy traffic, occlusion, camera movement, and missed detections can affect tracking and counting.
+**Heavy traffic, occlusion, camera movement, and missed detections can affect tracking and counting.**
 
-\* The current implementation uses the pretrained YOLO11 model without project-specific vehicle fine-tuning.
+**The current implementation uses the pretrained YOLO11 model without project-specific vehicle fine-tuning.**
 
 
 
-\## Future Improvements
+## Future Improvements
 
 
 
@@ -866,37 +839,37 @@ Potential extensions include:
 
 
 
-\* Automatic counting-line placement
+**Automatic counting-line placement**
 
-\* Multiple counting lines
+**Multiple counting lines**
 
-\* Direction-wise traffic analysis
+**Direction-wise traffic analysis**
 
-\* Vehicle speed estimation
+**Vehicle speed estimation**
 
-\* Lane-wise vehicle counting
+**Lane-wise vehicle counting**
 
-\* Traffic density estimation
+**Traffic density estimation**
 
-\* Vehicle trajectory visualization
+**Vehicle trajectory visualization**
 
-\* CSV/JSON export of vehicle statistics
+**CSV/JSON export of vehicle statistics**
 
-\* Dashboard integration
+**Dashboard integration**
 
-\* Custom-trained YOLO model
+**Custom-trained YOLO model**
 
-\* Advanced tracking and re-identification
+**Advanced tracking and re-identification**
 
-\* Real-time camera/RTSP stream support
-
-
-
-\## Author
+**Real-time camera/RTSP stream support**
 
 
 
-\*\*Zainab Ali\*\*
+## Author
+
+
+
+**Zainab Ali**
 
 
 
@@ -904,8 +877,7 @@ MS Data Science | Computer Vision | Machine Learning | Artificial Intelligence
 
 
 
-\## License
-
+## License
 
 
 This project is intended for educational and research purposes.
