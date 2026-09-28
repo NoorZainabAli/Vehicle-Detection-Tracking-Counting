@@ -1,37 +1,40 @@
+# Virtual environment
+.venv/
+venv/
+env/
+
 # Python cache
 __pycache__/
-*.pyc
-*.pyo
-*.pyd
+*.py[cod]
 
-# Virtual environment
-venv/
-.venv/
-
-# OS files
-.DS_Store
-Thumbs.db
-
-# IDE/editor files
+# VS Code
 .vscode/
 .idea/
+
+# Generated test images
+first_frame.jpg
+middle_frame.jpg
+
+# Backup files
+src/video_test_backup.py
+
+# YOLO model weights
+*.pt
 
 # Video files
 videos/*.mp4
 videos/*.avi
 videos/*.mov
-*.mp4
-*.avi
-*.mov
+videos/*.mkv
 
-# Output videos and generated files
-output/*.mp4
-output/*.avi
-output/*.mov
+# YOLO outputs
+runs/
+output/
+outputs/
 
-# Model downloads (keep if you want them tracked later)
-models/*.pt
-*.pt
-
-# Local data
+# Logs
 *.log
+
+# OS files
+.DS_Store
+Thumbs.db
